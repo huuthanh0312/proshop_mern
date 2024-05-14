@@ -5,7 +5,7 @@ const notFound = (req, res, next) => {
 };
 
 const errorHandler = (err, req, res, next) => {
-  let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+  let statusCode = res.status === 200 ? 500 : res.status;
   let message = err.message;
 
   //check for mongoose bad objectId
